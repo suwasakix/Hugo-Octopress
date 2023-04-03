@@ -54,7 +54,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   sidebarMenuHeader = "Sidebar Links"
 
   # sidebar links
-  github = "https://github.com/parsiya/Hugo-Octopress"
+  github = "https://github.com/suwasakix/Hugo-Octopress"
   bitbucket = ""
   twitter = ""
   mastodon = ""
@@ -171,7 +171,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 
 [[menu.main]]
   Name = "This theme on Github"
-  URL = "https://www.github.com/parsiya/hugo-octopress"
+  URL = "https://www.github.com/suwasakix/hugo-octopress"
 
 
 # Sidebar menus
