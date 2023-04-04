@@ -10,7 +10,7 @@
       <span class="categories">
         Tags:
         <!-- need to convert the tags to lower for the URLs to work -->
-          {{ range .Params.tags }}<a class="category" href="{{ "/tags/" | absURL }}{{ . | urlize | lower }}">{{ . }}</a>  {{ end }}
+          {{ range .Params.tags }}<a class="category" href="{{ "/tags/" | absURL }}{{ . | urlize | lower }}/index.html">{{ . }}</a>  {{ end }}
     {{ end }}
     </span>
   </p>
@@ -26,11 +26,11 @@
 
   <p class="meta">
     {{ with .PrevInSection }}
-        <a class="basic-alignment left" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
+        <a class="basic-alignment left" href="{{ .Permalink }}index.html" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
     {{ end }}
 
     {{ with .NextInSection }}
-      <a class="basic-alignment right" href="{{ .Permalink }}" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
+      <a class="basic-alignment right" href="{{ .Permalink }}index.html" title="{{ .LinkTitle }}">{{ .LinkTitle }}</a>
     {{ end }}
   </p>
   {{ if .Site.DisqusShortname }}

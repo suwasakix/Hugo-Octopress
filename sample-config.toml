@@ -1,5 +1,6 @@
-
-baseurl = "https://example.com"
+# To make this site work on your local PC without hugo server, set baseurl to "/" and set relativeURLs to true
+baseurl = "/"
+relativeURLs = true
 disablePathToLower = false
 languageCode = "en-us"
 title = "Site title"
@@ -31,6 +32,8 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   #     hrefTargetBlank = true # open links in a new tab
 
 [params]
+  # Header title link
+  headerURL = "http://example.org/"
 
   # --- Start sidebar options ---
   # Number of last posts that will be displayed in the sidebar - set to 0 or remove to hide this section
@@ -161,7 +164,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 # If it does not exist or is set to false then links will open in the same window
 [[menu.main]]
   Name = "Site's Home Page"
-  URL = "/"
+  URL = "/index.html"
   weight = -5
 
 [[menu.main]]
@@ -184,10 +187,10 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 
 [[menu.sidebar]]
   Name = "Hugo category"
-  URL = "/categories/golang/"
+  URL = "/categories/index.html"
   weight = 1
 
 [[menu.sidebar]]
   Name = "About page"
-  URL = "/about"
+  URL = "/about/index.html"
   weight = 2

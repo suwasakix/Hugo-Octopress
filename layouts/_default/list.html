@@ -19,7 +19,7 @@
           </h2>
           <article>
             <h1>
-              <a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a>
+              <a href="{{ .Permalink }}index.html" title="{{ .Title }}">{{ .Title }}</a>
             </h1>
             <time>
               <span class="month">{{ .Date | dateFormat "Jan" }}</span>
@@ -30,14 +30,14 @@
                 {{ $.Scratch.Set "cats" .Params.categories }}
                 {{ with .Params.categories }}
                 posted in:
-                {{ range ($.Scratch.Get "cats") }} <a class="category" href="{{ "/categories/" | absURL }}{{ . | urlize | lower }}">{{ . }}</a>{{ end }}
+                {{ range ($.Scratch.Get "cats") }} <a class="category" href="{{ "/categories/" | absURL }}{{ . | urlize | lower }}/index.html">{{ . }}</a>{{ end }}
               </br>
                 {{ end }}
 
                 {{ $.Scratch.Set "tags" .Params.tags }}
                 {{ with .Params.tags }}
                 tags:
-                {{ range ($.Scratch.Get "tags") }} <a class="category" href="{{ "/tags/" | absURL }}{{ . | urlize | lower }}">{{ . }}</a>{{ end }}
+                {{ range ($.Scratch.Get "tags") }} <a class="category" href="{{ "/tags/" | absURL }}{{ . | urlize | lower }}/index.html">{{ . }}</a>{{ end }}
                 {{ end }}
               </span>
             </footer>
