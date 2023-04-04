@@ -47,7 +47,7 @@
           {{ range first . $pages }}
             {{ if .IsPage }}
               <li class="post">
-                <a href="{{ .RelPermalink }}index.html">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}index.html">{{ .Title }}</a> <time><span class="date">{{ .Date.Format "2006.01.02" }}</span></time>
               </li>
             {{ end }}
           {{ end }}

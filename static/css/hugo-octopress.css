@@ -1444,6 +1444,7 @@ figure.code figcaption a:hover {
     font-size: .9em;
     line-height: 1.2em
 }
+#blog-archives time .date,
 #blog-archives time .month,
 #blog-archives time .day {
     display: inline-block;
@@ -1562,6 +1563,10 @@ aside.sidebar a {
     -moz-transition: color 0.5s;
     -o-transition: color 0.5s;
     transition: color 0.5s
+}
+aside.sidebar span.date {
+    font-size: smaller;
+    color: #aaa;
 }
 aside.sidebar:hover a {
     color: #222

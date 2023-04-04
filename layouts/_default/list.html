@@ -22,8 +22,7 @@
               <a href="{{ .Permalink }}index.html" title="{{ .Title }}">{{ .Title }}</a>
             </h1>
             <time>
-              <span class="month">{{ .Date | dateFormat "Jan" }}</span>
-              <span class="day">{{ .Date | dateFormat "2" }}</span>
+              <span class="date">{{ .Date | dateFormat "1.2" }}</span>
             </time>
             <footer>
               <span class="categories"> <!-- show categories and tags -->
