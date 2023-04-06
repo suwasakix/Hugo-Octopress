@@ -1505,6 +1505,9 @@ figure.code figcaption a:hover {
 #content>.category .year {
     display: inline;
 }
+#tags-list .count {
+    font-size: smaller
+}
 .side-shadow-border,
 aside.sidebar section h1,
 aside.sidebar li {
