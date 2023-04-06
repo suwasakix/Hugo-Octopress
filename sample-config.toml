@@ -118,6 +118,9 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   notFoundText = """Please either go back or use the navigation/sidebar menus.
   """
 
+  # Set to true to hide Prev/Next on posts
+  disablePageSwiper = true
+
   # Set to true to hide ReadingTime on posts
   disableReadingTime = false
 
