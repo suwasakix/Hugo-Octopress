@@ -26,13 +26,11 @@
             </time>
             <footer>
               <span class="categories"> <!-- show categories and tags -->
-                {{ if eq $.Data.Singular "tag"}}
-                  {{ $.Scratch.Set "cats" .Params.categories }}
-                  {{ with .Params.categories }}
-                  posted in:
-                  {{ range ($.Scratch.Get "cats") }} <a class="category" href="{{ "/categories/" | absURL }}{{ . | urlize | lower }}/index.html">{{ . }}</a>{{ end }}
-                  </br>
-                  {{ end }}
+                {{ $.Scratch.Set "cats" .Params.categories }}
+                {{ with .Params.categories }}
+                posted in:
+                {{ range ($.Scratch.Get "cats") }} <a class="category" href="{{ "/categories/" | absURL }}{{ . | urlize | lower }}/index.html">{{ . }}</a>{{ end }}
+              </br>
                 {{ end }}
 
                 {{ $.Scratch.Set "tags" .Params.tags }}
