@@ -10,7 +10,7 @@
           <h1 class="entry-title">
             {{ .Title }} <!-- we don't need page title to be a link on the actual page -->
           </h1>
-          <p class="meta">{{ .Date.Format "2006.01.02" }}
+          <p class="meta">{{ if not .Site.Params.disableHeaderDateOfSinglePage }}{{ .Date.Format "2006.01.02" }}{{ end }}
             {{ if not .Site.Params.disableReadingTime }} - {{ .ReadingTime }} minute read {{ end }}
             {{ if .Site.Params.disqusShortname }} - <a href="{{ .Permalink }}index.html#disqus_thread">Comments</a>{{ end }}
 
