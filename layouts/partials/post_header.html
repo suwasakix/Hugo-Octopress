@@ -3,7 +3,7 @@
 <header>
   <p class="meta">{{ .Date.Format "2006.01.02" }}
     {{ if not .Site.Params.disableReadingTime }} - {{ .ReadingTime }} minute read {{ end }}
-    {{ if .Site.DisqusShortname }} - <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+    {{ if .Site.DisqusShortname }} - <a href="{{ .Permalink }}index.html#disqus_thread">Comments</a>{{ end }}
 
     {{ if isset .Params "categories" }}
     <!-- in order to make category URLs work, we need to urlize them and

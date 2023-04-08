@@ -12,7 +12,7 @@
           </h1>
           <p class="meta">{{ .Date.Format "2006.01.02" }}
             {{ if not .Site.Params.disableReadingTime }} - {{ .ReadingTime }} minute read {{ end }}
-            {{ if .Site.Params.disqusShortname }} - <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+            {{ if .Site.Params.disqusShortname }} - <a href="{{ .Permalink }}index.html#disqus_thread">Comments</a>{{ end }}
 
           <!-- if you want anything in the header between Disqus comments and categories add them here -->
 
