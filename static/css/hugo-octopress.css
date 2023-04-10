@@ -772,7 +772,7 @@ body.sidebar-footer .toggle-sidebar {
     }
 }
 body>header {
-    background: #333
+    background: #333 url('header.jpg') no-repeat center center scroll
 }
 body>header h1 {
     display: inline-block;
