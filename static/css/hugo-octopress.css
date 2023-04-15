@@ -1916,15 +1916,29 @@ h6 {
 /* Hugo Figure shortcode - start */
 
 figure figcaption {
-    background: #fff;
-    text-align: center;
-    font-size: 1em;
+    /* background: #fff; */
+    /* text-align: center; */
+    /* font-size: 1em; */
+    font-size: smaller;
     color: #666;
     display: block;
+    line-height: 1.2em;
+    margin-inline: auto;
+    max-inline-size: max-content;
+    width: fit-content;
 }
 
 figure {
     color: #666;
+    margin-inline: auto;
+    max-inline-size: max-content;
+}
+
+figure img {
+    vertical-align: text-bottom;
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    border: none;
 }
 
 figure a {
