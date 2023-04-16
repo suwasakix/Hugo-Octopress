@@ -1950,3 +1950,42 @@ figure a {
 }
 
 /* Hugo Figure shortcode - end */
+
+/* shortcode image.html - start */
+
+.image {
+    display: block;
+}
+
+.image a {
+    text-decoration: none;
+    white-space: normal;
+}
+
+.image img {
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    border: none;
+}
+
+/* shortcode images.html - end */
+
+/* shortcode images.html - start */
+
+.images {
+    display: inline-block;
+}
+
+.images a {
+    text-decoration: none;
+    white-space: normal;
+}
+
+.images img {
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    border: none;
+}
+
+/* shortcode images.html - end */
+

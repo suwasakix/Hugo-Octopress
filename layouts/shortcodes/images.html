@@ -1,0 +1,88 @@
+<!-- SPDX-License-Identifier: MIT
+     Copyright (c) 2023 suwasakix
+     https://github.com/suwasakix/Hugo-Octopress/tree/master/layouts/shortcodes
+-->
+
+<div class="images" {{ with .Get "style" }}style="{{ . }}"{{ end }}>
+  {{ if .Get "src1" }}
+    {{ with .Get "link1" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src1" }}"
+        {{ with .Get "alt1" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width1" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height1" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link1" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src2" }}
+    {{ with .Get "link2" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src2" }}"
+        {{ with .Get "alt2" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width2" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height2" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link2" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src3" }}
+    {{ with .Get "link3" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src3" }}"
+        {{ with .Get "alt3" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width3" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height3" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link3" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src4" }}
+    {{ with .Get "link4" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src4" }}"
+        {{ with .Get "alt4" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width4" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height4" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link4" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src5" }}
+    {{ with .Get "link5" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src5" }}"
+        {{ with .Get "alt5" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width5" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height5" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link5" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src6" }}
+    {{ with .Get "link6" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src6" }}"
+        {{ with .Get "alt6" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width6" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height6" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link6" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src7" }}
+    {{ with .Get "link7" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src7" }}"
+        {{ with .Get "alt7" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width7" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height7" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link7" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src8" }}
+    {{ with .Get "link8" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src8" }}"
+        {{ with .Get "alt8" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width8" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height8" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link8" }}</a>{{ end }}
+  {{ end }}
+  {{ if .Get "src9" }}
+    {{ with .Get "link9" }}<a href="{{ . }}">{{ end }}
+      <img src="{{ .Get "src9" }}"
+        {{ with .Get "alt9" }} alt="{{ . }}"{{ end }}
+        {{ with .Get "width9" }} width="{{ . }}"{{ end }}
+        {{ with .Get "height9" }} height="{{ . }}"{{ end }}
+      />
+    {{ if .Get "link9" }}</a>{{ end }}
+  {{ end }}
+</div>
