@@ -5,7 +5,7 @@
 
 {{- $id := .Get "id" -}}
 {{- $height := .Get "height" | default "500px" -}}
-{{- $max_width := .Get "max_width" | default "620px" -}}
+{{- $max_width := .Get "max-width" | default "620px" -}}
 
 <iframe src="https://ws.formzu.net/dist/{{ $id }}/" style="height: {{ $height }}; max-width: {{ $max_width }}; width: 100%; border: 0;">
 </iframe>
