@@ -1,0 +1,64 @@
+{{ if .IsPage }}
+  {{ if .Site.Params.defaultOgImage }}
+    <!-- Open Graph Protocol -->
+    <meta property="og:title" content="{{ .Title }}"/>
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta property="og:url" content="{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}" />
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
+    <!-- Recommended size of open graph image for Facebook is 1200x630px (1.91:1) -->
+    {{ if ( .Params.ogImage ) }}
+      {{ $protocol := index (findRE `^.*?:` .Params.ogImage) 0 }}
+      {{ $root := substr .Params.ogImage 0 1 }}
+      {{ if or (eq $protocol "http:") (eq $protocol "https:") }}
+        <meta property="og:image" content="{{ .Params.ogImage }}">
+      {{ else if (eq $root "/") }}
+        <meta property="og:image" content="{{ $.Site.Params.remoteSiteURL }}{{ .Params.ogImage }}">
+      {{ else }}
+        <meta property="og:image" content="{{ $.Site.Params.remoteSiteURL }}{{ $.Permalink }}{{ .Params.ogImage }}">
+      {{ end }}
+    {{ else }}
+      {{ $protocol := index (findRE `^.*?:` .Site.Params.defaultOgImage) 0 }}
+      {{ $root := substr .Site.Params.defaultOgImage 0 1 }}
+      {{ if or (eq $protocol "http:") (eq $protocol "https:") }}
+        <meta property="og:image" content="{{ .Site.Params.defaultOgImage }}">
+      {{ else if (eq $root "/") }}
+        <meta property="og:image" content="{{ $.Site.Params.remoteSiteURL }}{{ .Site.Params.defaultOgImage }}">
+      {{ else }}
+        <meta property="og:image" content="{{ $.Site.Params.remoteSiteURL }}{{ $.Permalink }}{{ .Site.Params.defaultOgImage }}">
+      {{ end }}
+    {{ end }}
+
+    <!-- Facebook Open Graph -->
+    {{ if .Site.Params.facebookAppID }}
+        <meta property="fb:app_id" content="{{ .Site.Params.facebookAppID }}">
+    {{ end }}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="{{ .Title }}"/>
+    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}"/>
+    <!-- Recommended aspect ratio of Twitter Card Large Image is 1.91:1 (minimum dimensions of 300x157) -->
+    {{ if ( .Params.ogImage ) }}
+      {{ $protocol := index (findRE `^.*?:` .Params.ogImage) 0 }}
+      {{ $root := substr .Params.ogImage 0 1 }}
+      {{ if or (eq $protocol "http:") (eq $protocol "https:") }}
+        <meta name="twitter:image" content="{{ .Params.ogImage }}"/>
+      {{ else if (eq $root "/") }}
+        <meta name="twitter:image" content="{{ $.Site.Params.remoteSiteURL }}{{ .Params.ogImage }}"/>
+      {{ else }}
+        <meta name="twitter:image" content="{{ $.Site.Params.remoteSiteURL }}{{ $.Permalink }}{{ .Params.ogImage }}"/>
+      {{ end }}
+    {{ else }}
+      {{ $protocol := index (findRE `^.*?:` .Site.Params.defaultOgImage) 0 }}
+      {{ $root := substr .Site.Params.defaultOgImage 0 1 }}
+      {{ if or (eq $protocol "http:") (eq $protocol "https:") }}
+        <meta name="twitter:image" content="{{ .Site.Params.defaultOgImage }}"/>
+      {{ else if (eq $root "/") }}
+        <meta name="twitter:image" content="{{ $.Site.Params.remoteSiteURL }}{{ .Site.Params.defaultOgImage }}"/>
+      {{ else }}
+        <meta name="twitter:image" content="{{ $.Site.Params.remoteSiteURL }}{{ $.Permalink }}{{ .Site.Params.defaultOgImage }}"/>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}

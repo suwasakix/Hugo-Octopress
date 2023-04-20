@@ -146,14 +146,21 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # Sort the taxonomy alphabetically.
   # sortTaxonomyAlphabetical = true
 
-  # Twitter card config
-  # Enable with this.
-  # twitterCardEnabled = true
-  # Don't include the @.
-  # twitterCardSite = 
-  # twitterCardDomain = "parsiya.net"
-  # Don't include the @.
-  # twitterCardAuthor = "CryptoGangsta"
+  ## Twitter card config
+  ## Enable with this.
+  ## twitterCardEnabled = true
+  ## Don't include the @.
+  ## twitterCardSite = 
+  ## twitterCardDomain = "parsiya.net"
+  ## Don't include the @.
+  ## twitterCardAuthor = "CryptoGangsta"
+
+  # Open Graph Protocol
+  # Set defaultOgImage to enable Open Graph Protocol and Twitter Card
+  # The recommended size for a OG image is 1200Å~630 pixels
+  # defaultOgImage = "/ogimage.jpg"
+  # defaultOgImage = "https://raw.githubusercontent.com/gohugoio/hugo/master/docs/static/share/powered-by-hugo.png"
+  # facebookAppID = "000000000000000"
 
   # Set to true to enable compact index. Set to false or remove to go back to classic view.
   # compactIndex = true
