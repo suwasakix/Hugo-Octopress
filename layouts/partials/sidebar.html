@@ -56,13 +56,11 @@
       <section class="even">
         <h1>Recent Posts</h1>
         <ul id="recent_posts">
-          {{ $pages := where $.Site.Pages "Type" "post" }}
+          {{ $pages := where (where $.Site.Pages "Type" "post") "IsPage" true }}
           {{ range first . $pages }}
-            {{ if .IsPage }}
-              <li class="post">
-                <a href="{{ .RelPermalink }}index.html">{{ .Title }}</a> <time><span class="date">{{ .Date.Format "2006.01.02" }}</span></time>
-              </li>
-            {{ end }}
+            <li class="post">
+              <a href="{{ .RelPermalink }}index.html">{{ .Title }}</a> <time><span class="date">{{ .Date.Format "2006.01.02" }}</span></time>
+            </li>
           {{ end }}
         </ul>
       </section>
