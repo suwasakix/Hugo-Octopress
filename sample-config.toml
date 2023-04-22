@@ -162,6 +162,9 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # defaultOgImage = "https://raw.githubusercontent.com/gohugoio/hugo/master/docs/static/share/powered-by-hugo.png"
   # facebookAppID = "000000000000000"
 
+  # SNS share buttons
+  # snsShareButtons = true
+
   # Set to true to enable compact index. Set to false or remove to go back to classic view.
   # compactIndex = true
 

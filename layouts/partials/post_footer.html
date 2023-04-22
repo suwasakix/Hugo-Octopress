@@ -3,7 +3,7 @@
 
 <footer>
   <p class="meta">
-    <span class="byline author vcard">Posted by <span class="fn">{{ with .Site.Params.author }}{{ . }}{{ end }}</span></span>
+    <span class="byline author vcard">&ensp;&ensp;Posted by <span class="fn">{{ with .Site.Params.author }}{{ . }}{{ end }}</span></span>
     <!-- can't put the .Date.Format inside the datetime attribute because of double quotes, so it's outside -->
     <time>{{ .Date.Format "2006.01.02 15:04" }}</time>
     {{ if isset .Params "tags" }}
@@ -35,6 +35,43 @@
       {{ end }}
     </p>
   {{ end }}
+
+  <!-- SNS share buttons -->
+  {{ if .Site.Params.snsShareButtons }}
+    <div class="sns_share_area">
+      <ul class="sns_share_list">
+        <!-- share this post on Facebook -->
+        <li class="sns_share_item">
+          <a href="https://www.facebook.com/sharer/sharer.php?u={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}&t={{ .Title }}%0A"><i class="fa fa-facebook-official fa-2x" style="color:#1877f2"></i></a>
+        </li>
+        <!-- tweet this post on Twitter / search this post on Twitter -->
+        <li class="sns_share_item">
+          <a href="https://twitter.com/intent/tweet?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}&text={{ .Title }}%0A"><i class="fa fa-twitter fa-2x" style="color:#1d9bf0"></i></a>
+          <a href="https://twitter.com/search?q={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}"><i class="fa fa-commenting fa-2x" style="color:#1d9bf0"></i></a>
+        </li>
+        <!-- share this post on Mastodon (powered by MastodonShare) -->
+        <li class="sns_share_item">
+          <a href="https://mastodonshare.com/?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}&text={{ .Title }}%0A"><i class="fa fa-mastodon fa-2x" style="color:#6364ff"></i></a>
+        </li>
+        <!-- share this post on LINE -->
+        <li class="sns_share_item">
+          <a href="https://b.hatena.ne.jp/entry/{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}"><img class="sns_share_item_image" src="/share/hatena.png" width="36px" height="36px"></img></i></a>
+        </li>
+        <!--
+        <li class="sns_share_item_text">
+          <a href="https://b.hatena.ne.jp/entry/{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}" style="background-color:#00a4de">&nbsp;B!&nbsp;</i></a>
+        </li>
+        -->
+        <!-- share this post on LINE -->
+        <li class="sns_share_item">
+          <a href="https://social-plugins.line.me/lineit/share?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}"><img class="sns_share_item_image" src="/share/line.png" width="36px" height="36px"></img></i></a>
+        </li>
+      </ul>
+      <p>
+      </p>
+    </div>
+  {{ end }}
+
   {{ if .Site.DisqusShortname }}
     {{ if not (eq .Params.comments false) }}
       {{ template "_internal/disqus.html" . }}

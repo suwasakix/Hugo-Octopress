@@ -1953,6 +1953,45 @@ figure a {
 
 /* Hugo Figure shortcode - end */
 
+/* sns share post_footer.html - start */
+
+.sns_share_area {
+    margin-top: 12px;
+}
+
+.sns_share_list {
+    display: flex;
+    list-style-type: none;
+}
+
+.sns_share_item {
+    margin-right: 30px;
+}
+
+.sns_share_item_image {
+    -webkit-border-radius: 0em;
+    border-radius: 0em;
+    border: none;
+}
+
+.sns_share_item_text {
+    margin-right: 30px;
+}
+
+.sns_share_item_text a {
+    border-radius: 0.2em;
+    color: white;
+    font-size: x-large;
+    text-decoration: none;
+    vertical-align: sub;
+}
+
+.sns_share_item_text a:visited {
+    color: white;
+}
+
+/* sns share post_footer.html - end */
+
 /* shortcode image.html - start */
 
 .image {
