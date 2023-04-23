@@ -2,7 +2,8 @@
 baseurl = "/"
 relativeURLs = true
 disablePathToLower = false
-languageCode = "en-us"
+# languageCode = "en-us"
+languageCode = "ja"
 title = "Site title"
 theme = "Hugo-Octopress"
 
@@ -15,7 +16,7 @@ theme = "Hugo-Octopress"
 paginate = 6
 
 [permalinks]
-post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the old ones
+# post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the old ones
 
 [markup]
   # Default is startLevel 2 and endLevel 3, we want to render every heading
@@ -92,7 +93,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 
   # Text of the "Continue Reading" label. Supports markdown and inline HTML.
   # For example, &rarr; == right arrow.
-  continueReadingText = "Would you like to know more? &rarr;"
+  continueReadingText = "Read more &rarr;"
 
   # Optional piwik tracking
   # [params.analytics.piwik]
@@ -126,17 +127,17 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   disablePageSwiper = true
 
   # Set to true to hide header date of individual pages
-  disableHeaderDateOfSinglePage = false
+  disableHeaderDateOfSinglePage = true
 
   # Set to true to hide ReadingTime on posts
-  disableReadingTime = false
+  disableReadingTime = true
 
   # Set to true to disable downloading of remote Google fonts
   disableGoogleFonts = false
 
   # Remove or Set to false to use local fonts
   # remoteFonts = false
-  
+
   # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
   # fontAwesome = false
 
@@ -158,12 +159,12 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # Open Graph Protocol
   # Set defaultOgImage to enable Open Graph Protocol and Twitter Card
   # The recommended size for a OG image is 1200x630 pixels
-  # defaultOgImage = "/og/default.jpg"
+  defaultOgImage = "/og/default.jpg"
   # defaultOgImage = "https://raw.githubusercontent.com/gohugoio/hugo/master/docs/static/share/powered-by-hugo.png"
   # facebookAppID = "000000000000000"
 
   # SNS share buttons
-  # snsShareButtons = true
+  snsShareButtons = true
 
   # Set to true to enable compact index. Set to false or remove to go back to classic view.
   # compactIndex = true
@@ -183,18 +184,14 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
 # If navigationNewWindow (under [params]) is set to true then all links except root ("/") will open in a new window
 # If it does not exist or is set to false then links will open in the same window
 [[menu.main]]
+  Name = "About Page"
+  URL = "/about/index.html"
+  weight = -2
+
+[[menu.main]]
   Name = "Site's Home Page"
   URL = "/index.html"
-  weight = -5
-
-[[menu.main]]
-  Name = "Google"
-  URL = "https://www.google.com/"
-  weight = -5
-
-[[menu.main]]
-  Name = "This theme on Github"
-  URL = "https://www.github.com/suwasakix/hugo-octopress"
+  weight = -1
 
 
 # Sidebar menus
@@ -204,13 +201,3 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   Name = "Google"
   URL = "https://www.google.com"
   weight = 0
-
-[[menu.sidebar]]
-  Name = "Hugo category"
-  URL = "/categories/index.html"
-  weight = 1
-
-[[menu.sidebar]]
-  Name = "About page"
-  URL = "/about/index.html"
-  weight = 2
