@@ -158,7 +158,7 @@ post = "/blog/:year-:month-:day-:title/" # change the post URL to look like the 
   # Open Graph Protocol
   # Set defaultOgImage to enable Open Graph Protocol and Twitter Card
   # The recommended size for a OG image is 1200x630 pixels
-  # defaultOgImage = "/ogimage.jpg"
+  # defaultOgImage = "/og/default.jpg"
   # defaultOgImage = "https://raw.githubusercontent.com/gohugoio/hugo/master/docs/static/share/powered-by-hugo.png"
   # facebookAppID = "000000000000000"
 
