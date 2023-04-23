@@ -1,15 +1,17 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+draft: false
 toc: false
 comments: false
-categories:
-- category1
-- category2
-tags:
-- tag1
-- tag2
+# categories:
+# - category1
+# - category2
+# tags:
+# - tag1
+# - tag2
+description: 
+ogimage: 
 ---
 
 
