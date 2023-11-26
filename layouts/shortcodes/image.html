@@ -3,7 +3,7 @@
      https://github.com/suwasakix/Hugo-Octopress/tree/master/layouts/shortcodes
 -->
 
-<div class="image" {{ with .Get "style" }}style="{{ . }}"{{ end }}>
+<div class="image" {{ with .Get "style" }}style="{{ . | safeCSS }}"{{ end }}>
   {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
     <img src="{{ .Get "src" }}"
       {{ with .Get "alt" }} alt="{{ . }}"{{ end }}
