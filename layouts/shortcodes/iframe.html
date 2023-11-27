@@ -1,0 +1,10 @@
+<!-- SPDX-License-Identifier: MIT
+     Copyright (c) 2023 suwasakix
+     https://github.com/suwasakix/Hugo-Octopress/tree/master/layouts/shortcodes
+-->
+
+<iframe 
+  {{ with .Get "src" }} src="{{ . }}"{{ end }}
+  {{ with .Get "width" }} width="{{ . }}"{{ end }}
+  {{ with .Get "height" }} height="{{ . }}"{{ end }}>
+</iframe>
