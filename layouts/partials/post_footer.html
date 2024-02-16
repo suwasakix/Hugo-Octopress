@@ -53,18 +53,13 @@
         <li class="sns_share_item">
           <a href="https://mastodonshare.com/?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html&text={{ .Title }}%0A"><i class="fa fa-mastodon fa-2x" style="color:#6364ff"></i></a>
         </li>
+        <!-- share this post on Hatena Blog -->
+        <li class="sns_share_item">
+          <a href="https://b.hatena.ne.jp/entry/{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><img class="sns_share_item_image" src="/share/hatena.png" width="36px" height="36px"></img></a>
+        </li>
         <!-- share this post on LINE -->
         <li class="sns_share_item">
-          <a href="https://b.hatena.ne.jp/entry/{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><img class="sns_share_item_image" src="/share/hatena.png" width="36px" height="36px"></img></i></a>
-        </li>
-        <!--
-        <li class="sns_share_item_text">
-          <a href="https://b.hatena.ne.jp/entry/{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html" style="background-color:#00a4de">&nbsp;B!&nbsp;</i></a>
-        </li>
-        -->
-        <!-- share this post on LINE -->
-        <li class="sns_share_item">
-          <a href="https://social-plugins.line.me/lineit/share?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><img class="sns_share_item_image" src="/share/line.png" width="36px" height="36px"></img></i></a>
+          <a href="https://social-plugins.line.me/lineit/share?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><img class="sns_share_item_image" src="/share/line.png" width="36px" height="36px"></img></a>
         </li>
       </ul>
       <p>
