@@ -68,14 +68,18 @@ paginate = 6
   # sidebar links
   github = "https://github.com/suwasakix/Hugo-Octopress"
   bitbucket = ""
+  gitlab = ""
   twitter = ""
+  bluesky = ""
   mastodon = ""
   keybase = ""
   stackoverflow = ""
   linkedin = ""
   youtube = ""
+  discord = ""
   facebook = ""
   instagram = ""
+  threads = ""
 
   # --- End sidebar options ---
 
@@ -142,8 +146,8 @@ paginate = 6
   # Remove or Set to false to use local fonts
   # remoteFonts = false
 
-  # Remove or set to false to use FontAwesome CDN, otherwise the theme uses ForkAwesome local fonts.
-  # fontAwesome = false
+  # Remove or set to false to use FontAwesome CDN, otherwise the theme uses FontAwesome local fonts.
+  # fontAwesomeCDN = false
 
   # Generate taxonomy pages
   generateTaxonomyList = true

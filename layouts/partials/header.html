@@ -32,10 +32,10 @@
     <link rel="stylesheet" href="{{ $.Site.BaseURL }}{{ . }}">
   {{ end }}
 
-  {{ if not .Site.Params.fontAwesome }}
-    <link rel="stylesheet" href="/css/fork-awesome.min.css">
+  {{ if not .Site.Params.fontAwesomeCDN }}
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
   {{ else }}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   {{ end }}
 
   <!-- favicon -->
