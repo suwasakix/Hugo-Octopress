@@ -12,9 +12,6 @@
           </h1>
           <p class="meta">{{ if not .Site.Params.disableHeaderDateOfSinglePage }}{{ .Date.Format "2006.01.02" }}{{ end }}
             {{ if not .Site.Params.disableReadingTime }} - {{ .ReadingTime }} minute read {{ end }}
-            {{ if .Site.Params.disqusShortname }} - <a href="{{ .Permalink }}index.html#disqus_thread">Comments</a>{{ end }}
-
-          <!-- if you want anything in the header between Disqus comments and categories add them here -->
 
           {{ if isset .Params "categories" }}
           <!-- <br/> this will make the categories go to the second line and mess with the title -->

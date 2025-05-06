@@ -70,10 +70,4 @@
       </p>
     </div>
   {{ end }}
-
-  {{ if .Site.DisqusShortname }}
-    {{ if not (eq .Params.comments false) }}
-      {{ template "_internal/disqus.html" . }}
-    {{ end }}
-  {{ end }}
 </footer>
