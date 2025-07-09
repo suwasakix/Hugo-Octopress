@@ -57,9 +57,15 @@ theme = "Hugo-Octopress"
   # If set to true, sidebar menu links will open in a new window
   sidebarNewWindow = false
 
+  # Categories / Tags
+  sidebarCategoriesTagsEnabled = false
+
+  # Categories List
+  sidebarCategoriesListEnabled = false
+
   # Sidebar menu - if true will add a sidebar menu between sidebar text and recent posts
   sidebarMenuEnabled = true
-  sidebarMenuHeader = "Sidebar Links"
+  sidebarMenuHeader = "External Links"
 
   # sidebar links
   github = "https://github.com/suwasakix/Hugo-Octopress"
