@@ -1,22 +1,22 @@
-<!-- Pagination partial for index -->
-<!-- Modified tpl/template_embedded.go -->
+{{- /* Pagination partial for index */ -}}
+{{- /* Modified tpl/template_embedded.go */ -}}
 
-<!-- default pagination.html creates <ul class="pagination"> and then a list of
+{{- /* default pagination.html creates <ul class="pagination"> and then a list of
     links for counters, forward and backward while Octopress uses
-    <div class="pagination"> and links inside-->
+    <div class="pagination"> and links inside*/ -}}
 
 {{ $pag := $.Paginator }}
 {{ if gt $pag.TotalPages 1 }}
 <div class="pagination">
 
     {{ with $pag.First }}
-        <!-- if you prefer characters instead use the following line -->
-        <!-- <a href="{{ .URL }}" aria-label="First" class="label-pagination"><span aria-hidden="true">&laquo;&laquo;</span></a> -->
+        {{- /* if you prefer characters instead use the following line */ -}}
+        {{- /* <a href="{{ .URL }}" aria-label="First" class="label-pagination"><span aria-hidden="true">&laquo;&laquo;</span></a> */ -}}
         <a href="{{ .URL }}index.html" aria-label="First" class="label-pagination"><i class="fa-solid fa-angles-left"></i></a>
     {{ end }}
 
     {{ if $pag.HasPrev }}
-    <!-- <a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}index.html{{ end }}" aria-label="Previous" class="label-pagination"><span aria-hidden="true">&laquo;</span></a> -->
+    {{- /* <a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}index.html{{ end }}" aria-label="Previous" class="label-pagination"><span aria-hidden="true">&laquo;</span></a> */ -}}
         <a href="{{ if $pag.HasPrev }}{{ $pag.Prev.URL }}index.html{{ end }}" aria-label="Previous" class="label-pagination"><i class="fa-solid fa-angle-left"></i></a>
     {{ end }}
 
@@ -25,12 +25,12 @@
     {{ end }}
 
     {{ if $pag.HasNext }}
-    <!-- <a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}index.html{{ end }}" aria-label="Next" class="label-pagination"><span aria-hidden="true">&raquo;</span></a> -->
+    {{- /* <a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}index.html{{ end }}" aria-label="Next" class="label-pagination"><span aria-hidden="true">&raquo;</span></a> */ -}}
         <a href="{{ if $pag.HasNext }}{{ $pag.Next.URL }}index.html{{ end }}" aria-label="Next" class="label-pagination"><i class="fa-solid fa-angle-right"></i></a>
     {{ end }}
 
     {{ with $pag.Last }}
-    <!-- <a href="{{ .URL }}" aria-label="Last"><span aria-hidden="true" class="label-pagination">&raquo;&raquo;</span></a> -->
+    {{- /* <a href="{{ .URL }}" aria-label="Last"><span aria-hidden="true" class="label-pagination">&raquo;&raquo;</span></a> */ -}}
         <a href="{{ .URL }}index.html" aria-label="Last"><i class="fa-solid fa-angles-right"></i></a>
     {{ end }}
 

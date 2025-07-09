@@ -1,5 +1,5 @@
 
-<!-- list layout (e.g. tags/categories) -->
+{{- /* list layout (e.g. tags/categories) */ -}}
 
 {{ partial "header.html" . }}
 
@@ -25,7 +25,7 @@
               <span class="date">{{ .Date | dateFormat "1.2" }}</span>
             </time>
             <footer>
-              <span class="categories"> <!-- show categories and tags -->
+              <span class="categories"> {{- /* show categories and tags */ -}}
                 {{ $.Scratch.Set "cats" .Params.categories }}
                 {{ with .Params.categories }}
                 posted in:
