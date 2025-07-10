@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
-<!-- Enable Open Graph Protocol -->
+{{- /* Enable Open Graph Protocol */ -}}
 {{ if .Site.Params.defaultOgImage }}
   <html prefix="og: https://ogp.me/ns#">
 {{ end }}
@@ -56,13 +56,13 @@
   {{ hugo.Generator }}
 
   {{- /* Enable Twitter card */ -}}
-  <!-- 
+  {{- /* 
   {{ with .Site.Params.twitterCardEnabled }}
     {{ partial "custom_twitter_card.html" $ }}
   {{ end }}
-  -->
+  */ -}}
 
-  <!-- Open Graph Protocol -->
+  {{- /* Open Graph Protocol */ -}}
   {{ partial "open_graph_protocol.html" . }}
 
   {{- /* Add extend_header.html */ -}}

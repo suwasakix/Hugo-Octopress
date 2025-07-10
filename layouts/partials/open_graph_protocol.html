@@ -1,12 +1,12 @@
 {{ if .IsPage }}
   {{ if .Site.Params.defaultOgImage }}
-    <!-- Open Graph Protocol -->
+    {{- /* Open Graph Protocol */ -}}
     <meta property="og:title" content="{{ .Title }}">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="{{ .Site.Title }}">
     <meta property="og:url" content="{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html">
     <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-    <!-- Recommended size of open graph image for Facebook is 1200x630px (1.91:1) -->
+    {{- /* Recommended size of open graph image for Facebook is 1200x630px (1.91:1) */ -}}
     {{ if ( .Params.ogImage ) }}
       {{ $protocol := index (findRE `^.*?:` .Params.ogImage) 0 }}
       {{ $root := substr .Params.ogImage 0 1 }}
@@ -29,16 +29,16 @@
       {{ end }}
     {{ end }}
 
-    <!-- Facebook Open Graph -->
+    {{- /* Facebook Open Graph */ -}}
     {{ if .Site.Params.facebookAppID }}
         <meta property="fb:app_id" content="{{ .Site.Params.facebookAppID }}">
     {{ end }}
 
-    <!-- Twitter Card -->
+    {{- /* Twitter Card */ -}}
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ .Title }}">
     <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-    <!-- Recommended aspect ratio of Twitter Card Large Image is 1.91:1 (minimum dimensions of 300x157) -->
+    {{- /* Recommended aspect ratio of Twitter Card Large Image is 1.91:1 (minimum dimensions of 300x157) */ -}}
     {{ if ( .Params.ogImage ) }}
       {{ $protocol := index (findRE `^.*?:` .Params.ogImage) 0 }}
       {{ $root := substr .Params.ogImage 0 1 }}

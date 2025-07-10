@@ -1,5 +1,5 @@
 
-<!-- post list page for each category -->
+{{- /* post list page for each category */ -}}
 
 {{ partial "header.html" . }}
 
@@ -25,7 +25,7 @@
               <span class="date">{{ .Date | dateFormat "1.2" }}</span>
             </time>
             <footer>
-              <span class="categories"> <!-- show tags -->
+              <span class="categories"> {{- /* show tags */ -}}
                 {{ $.Scratch.Set "tags" .Params.tags }}
                 {{ with .Params.tags }}
                 tags:

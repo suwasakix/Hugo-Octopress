@@ -36,32 +36,32 @@
     </p>
   {{ end }}
 
-  <!-- SNS share buttons -->
+  {{- /* SNS share buttons */ -}}
   {{ if .Site.Params.snsShareButtons }}
     <div class="sns_share_area">
       <ul class="sns_share_list">
-        <!-- share this post on Facebook -->
+        {{- /* share this post on Facebook */ -}}
         <li class="sns_share_item">
           <a href="https://www.facebook.com/sharer/sharer.php?u={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html&t={{ .Title }}%0A"><i class="fa-brands fa-facebook fa-2x" style="color:#1877f2"></i></a>
         </li>
-        <!-- tweet this post on Twitter / search this post on Twitter -->
+        {{- /* tweet this post on Twitter / search this post on Twitter */ -}}
         <li class="sns_share_item">
           <a href="https://twitter.com/intent/tweet?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html&text={{ .Title }}%0A"><i class="fa-brands fa-twitter fa-2x" style="color:#1d9bf0"></i></a>
           <a href="https://twitter.com/search?q={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><i class="fa-solid fa-comment-dots fa-2x" style="color:#1d9bf0"></i></a>
         </li>
-        <!-- share this post on Bluesky -->
+        {{- /* share this post on Bluesky */ -}}
         <li class="sns_share_item">
           <a href="https://bsky.app/intent/compose?text={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><i class="fa-brands fa-bluesky fa-2x" style="color:#1185fe"></i></a>
         </li>
-        <!-- share this post on Mastodon (powered by MastodonShare) -->
+        {{- /* share this post on Mastodon (powered by MastodonShare) */ -}}
         <li class="sns_share_item">
           <a href="https://mastodonshare.com/?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html&text={{ .Title }}%0A"><i class="fa-brands fa-mastodon fa-2x" style="color:#6364ff"></i></a>
         </li>
-        <!-- share this post on Hatena Blog -->
+        {{- /* share this post on Hatena Blog */ -}}
         <li class="sns_share_item">
           <a href="https://b.hatena.ne.jp/entry/{{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><img class="sns_share_item_image" src="/share/hatena.png" width="36px" height="36px"></img></a>
         </li>
-        <!-- share this post on LINE -->
+        {{- /* share this post on LINE */ -}}
         <li class="sns_share_item">
           <a href="https://social-plugins.line.me/lineit/share?url={{ $.Site.Params.remoteSiteURL }}{{ .Permalink }}index.html"><img class="sns_share_item_image" src="/share/line.png" width="36px" height="36px"></img></a>
         </li>
