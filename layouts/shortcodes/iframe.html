@@ -3,7 +3,7 @@
        https://github.com/suwasakix/Hugo-Octopress/tree/master/layouts/shortcodes
 */ -}}
 
-<div style="display:flex; justify-content:center;">
+<div {{ with .Get "style" }}style="{{ . | safeCSS }}"{{ else }}style="display:flex;justify-content:center"{{ end }}>
   <iframe 
     {{ with .Get "src" }} src="{{ . }}"{{ end }}
     {{ with .Get "width" }} width="{{ . }}"{{ end }}
