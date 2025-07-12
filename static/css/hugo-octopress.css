@@ -2035,3 +2035,11 @@ figure a {
 
 /* shortcode images.html - end */
 
+/* shortcode toc_unmarked.html - start */
+
+.toc_unmarked li {
+    list-style: none;
+}
+
+/* shortcode toc_unmarked.html - end */
+
